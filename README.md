@@ -23,6 +23,8 @@ The assistant should:
 - Refuse when the answer is not supported by the corpus
 - Support authenticated users and conversation history
 
+The initial demo corpus covers FPT, VCB, MWG, and VIC for 2021–2025. It includes annual reports (BCTN) and consolidated annual financial statements (BCTC).
+
 ## Stack
 
 | Layer | Choice |
@@ -33,7 +35,7 @@ The assistant should:
 | Retrieval | `pgvector` + PostgreSQL full-text search |
 | Auth | Supabase Auth |
 | ORM / Migrations | SQLAlchemy + Alembic |
-| LLM + Embeddings | OpenAI |
+| LLM + Embeddings | Gemini API |
 | Hosting | Railway |
 
 ## Prerequisites
@@ -52,13 +54,18 @@ You also need accounts/keys for external services once the app is wired up.
 ## Repo layout
 
 ```text
-northstar-vietnamese-equity-research-ai/
+northstar-document-ai-assistant/
 ├── AGENTS.md
 ├── README.md
 ├── data/
-│   └── download.py
+│   ├── download.py
+│   ├── manifest.json
+│   └── <ticker>/<year>/{BCTN,BCTC}/
 ├── docs/
-│   ├── client-brief.md
+│   ├── architecture.md
+│   ├── brief.md
+│   ├── todos.md
 │   └── guides/
-├── backend/
-└── frontend/
+├── backend/              # FastAPI service
+└── frontend/             # Vite + React SPA
+```

@@ -44,12 +44,14 @@ An AI assistant that allows users to:
 6. Which companies show the strongest multi-year earnings growth?
 7. What do the reports disclose about major risks, competitive advantages, or changes in business conditions?
 8. What evidence in the reports supports or weakens specific CANSLIM factors?
-9. Compare the financial performance of FPT, MWG, HPG, VCB, and VIC across the available years.
+9. Compare the financial performance of FPT, MWG, VCB, and VIC across the available years.
 10. When the reports do not provide enough evidence, what conclusions should the assistant refuse to make?
 
 ## Initial corpus
 
 The initial corpus contains Vietnamese financial reports for selected Vietnamese public companies across multiple years.
+
+The initial demo is limited to four tickers (FPT, VCB, MWG, and VIC) from 2021 through 2025, with annual reports (BCTN) and consolidated annual financial statements (BCTC). Other tickers are out of scope until their reports are added to the corpus.
 
 Current sample companies:
 
